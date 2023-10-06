@@ -2,6 +2,7 @@ import React from "react";
 import ItemUser from "../components/itemUser";
 import Title from "../components/Title";
 import { Box, Typography, makeStyles } from "@material-ui/core";
+import Count from "../components/Count";
 
 const data = {
   name: "Miguel Marsiglia",
@@ -26,6 +27,7 @@ const Home = () => {
   return (
     <Box className={classes.container}>
       <Title text="BIENVENIDO A USER RANDOM" />
+      <Count/>
       <ItemUser user={data} />
       <Typography variant="body2" align="center">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquid
