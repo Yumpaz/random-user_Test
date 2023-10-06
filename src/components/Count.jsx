@@ -1,27 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./styles/UserCount.css";
+import { useCounter } from "./hooks/useCounter";
 
 const Count = () => {
-  const [count, setCount ] = useState(0); //=> [state, setState]
-
-  useEffect(() => {
-    document.title = `El estado tiene ${count}`//Cambiar el titulo de la página con cada cambio de estado
-  })
-
-  const handleAdd = () => {
-    setCount(count + 1);
-  }
-
-  const handleSubs = () => {
-    setCount(count - 1);
-  }
+  
+  const {count, handleAdd, handleSubs} = useCounter(0)
 
   return (
     <div className="count">
       <h2>Contador de usuarios</h2>
       <h3>{count}</h3>
-      <button onClick={handleAdd}>Aumentar</button>
-      <button onClick={handleSubs}>Disminuir</button>
+      <button onClick={() => handleAdd(10)}>Aumentar</button>
+      <button onClick={() => handleSubs(10)}>Disminuir</button>
     </div>
   );
 };
