@@ -4,9 +4,11 @@ import theme from "../themeConfig";
 import Home from "../pages/Home";
 import Form from "../pages/Form";
 import List from "../pages/List";
+import Edit from "../pages/Edit";
 import Layout from "../layout/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { User } from "../pages/User";
+
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
             <Route path="/List" element={<List />} />
             <Route path="/Form" element={<Form />} />
             <Route path="/user/:id" element={<User />} />
+            <Route path="/edit/:id" element={<Edit/>}/>
           </Routes>
         </Layout>
       </ThemeProvider>

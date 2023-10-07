@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React from "react";
 import "./styles/UserCount.css";
 import { useCounter } from "./hooks/useCounter";
 
