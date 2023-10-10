@@ -1,5 +1,5 @@
 import React from "react";
-import UserList from "../components/UserList";
+import UserList from "../components/containers/UserList";
 import Title from "../components/Title";
 import { Box, Typography, makeStyles } from "@material-ui/core";
 
