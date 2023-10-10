@@ -1,20 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Angel Arroyo",
-      "country": "Colombia",
-      "email": "angel@prueba.com",
-      "telefono": "3000000000"
-    },
-    {
-      "id": "2",
-      "name": "Fredy Marsiglia",
-      "country": "Colombia",
-      "email": "fredy@prueba.com",
-      "telefono": ""
-    },
-    {
       "id": "3",
       "name": "Felipe De Lima",
       "country": "Ecuador",
@@ -26,13 +12,6 @@
       "name": "Sonya Castro",
       "country": "Chile",
       "email": "chile@prueba.com",
-      "telefono": ""
-    },
-    {
-      "id": "5",
-      "name": "Melissa Muriel",
-      "country": "Costa Rica",
-      "email": "mint@prueba.com",
       "telefono": ""
     },
     {
