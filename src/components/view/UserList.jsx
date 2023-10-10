@@ -1,11 +1,12 @@
-import { Box, CircularProgress, Typography } from "@material-ui/core";
+import { Box, Button, CircularProgress, Typography, TextField } from "@material-ui/core";
 import React from "react";
 import SingleUser from "../SingleUser";
 import Modal from "../Modal";
 
-const UserList = ({ users, loading, error }) => {
+const UserList = ({ onLoad, users, loading, error, onFilter }) => {
   return (
     <>
+    <TextField label="Buscar" onChange={onFilter}/>
       {loading ? (
         <Box align="center" height="100vh"></Box>
       ) : (
@@ -13,6 +14,11 @@ const UserList = ({ users, loading, error }) => {
           {users.map((item, i) => (
             <SingleUser key={i} {...item} />
           ))}
+          <Box>
+            <Button align="center" variant="contained" color="secondary" onClick={onLoad}>
+              Cargar más
+            </Button>
+          </Box>
         </Box>
       )}
       {error && <Typography align="center">{error}</Typography>}
